@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.apexshipping.net/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Oct 2015 07:49:46 GMT -->
+<head>
+<title>Contact Us .: Proguard Security Services</title>
+<link rel="shortcut icon" href="images/logo.png">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42349525-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/cufon-yui.js" type="text/javascript"></script>
+<script src="js/cufon-replace.js" type="text/javascript"></script>
+<script src="js/Myriad_Pro_400.font.js" type="text/javascript"></script>
+<script src="js/Myriad_Pro_600.font.js" type="text/javascript"></script>
+<script src="js/NewsGoth_BT_400.font.js" type="text/javascript"></script>
+<script src="js/NewsGoth_BT_700.font.js" type="text/javascript"></script>
+<script src="js/NewsGoth_Dm_BT_400.font.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="js/ie_png.js"></script>
+<script type="text/javascript">ie_png.fix('.png, #header .row-2 ul li a, .extra img, #search-form a, #search-form a em, #login-form .field1 a, #login-form .field1 a em, #login-form .field1 a b');</script>
+<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<style type="text/css">
+			body {
+				padding: 50px;
+			}
+			/* The CSS Code for the menu starts here */
+			#menu {
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin: 50px 0;
+				padding: 0;
+				list-style-type: none;
+				background-color: #eee;
+				font-size: 13px;
+				height: 40px;
+				border-top: 2px solid #eee;
+				border-bottom: 2px solid #ccc;
+			}
+			#menu li {
+				float: left;
+				margin: 0;				
+			}
+			#menu li a {
+				text-decoration: none;
+				display: block;
+				padding: 0 20px;
+				line-height: 40px;
+				color: #666;
+			}
+			#menu li a:hover, #menu li.active a {
+				background-color: #f5f5f5;
+				border-bottom: 2px solid #DDD;
+				color: #000;
+			}
+			#menu_wrapper ul {margin-left: 12px;}
+			#menu_wrapper {padding: 0 16px 0 0; background: url(images/grey.png) no-repeat right;}
+			#menu_wrapper div {float: left; height: 44px; width: 12px; background: url(images/grey.png) no-repeat left;}
+			
+			
+			/* Blue Menu */
+			#menu_wrapper.blue ul {
+				border-top: 2px solid #356AA0;
+				border-bottom: 2px solid #204061;
+				background: #356AA0;}
+			#menu_wrapper.blue a {color: #fff;}
+			#menu_wrapper.blue li a:hover, #menu_wrapper.blue li.active a {color: # 00F; background: #3D7BBB; border-bottom: 2px solid #356AA0;}
+			#menu_wrapper.blue {background: url(images/blue.png) no-repeat right;}
+			#menu_wrapper.blue div {background: url(images/blue.png) no-repeat left;}
+			
+		}
+		</style>
+        <script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {		
+	
+	//Execute the slideShow, set 4 seconds for each images
+	slideShow(3000);
+
+});
+
+function slideShow(speed) {
+
+
+	//append a LI item to the UL list for displaying caption
+	$('ul.slideshow').append('<li id="slideshow-caption" class="caption"><div class="slideshow-caption-container"><h3></h3><p></p></div></li>');
+
+	//Set the opacity of all images to 0
+	$('ul.slideshow li').css({opacity: 0.0});
+	
+	//Get the first image and display it (set it to full opacity)
+	$('ul.slideshow li:first').css({opacity: 1.0});
+	
+	//Get the caption of the first image from REL attribute and display it
+	$('#slideshow-caption h3').html($('ul.slideshow a:first').find('img').attr('title'));
+	$('#slideshow-caption p').html($('ul.slideshow a:first').find('img').attr('alt'));
+		
+	//Display the caption
+	$('#slideshow-caption').css({opacity: 0.7, bottom:0});
+	
+	//Call the gallery function to run the slideshow	
+	var timer = setInterval('gallery()',speed);
+	
+	//pause the slideshow on mouse over
+	$('ul.slideshow').hover(
+		function () {
+			clearInterval(timer);	
+		}, 	
+		function () {
+			timer = setInterval('gallery()',speed);			
+		}
+	);
+	
+}
+
+function gallery() {
+
+
+	//if no IMGs have the show class, grab the first image
+	var current = ($('ul.slideshow li.show')?  $('ul.slideshow li.show') : $('#ul.slideshow li:first'));
+
+	//Get next image, if it reached the end of the slideshow, rotate it back to the first image
+	var next = ((current.next().length) ? ((current.next().attr('id') == 'slideshow-caption')? $('ul.slideshow li:first') :current.next()) : $('ul.slideshow li:first'));
+		
+	//Get next image caption
+	var title = next.find('img').attr('title');	
+	var desc = next.find('img').attr('alt');	
+
+	//Set the fade in effect for the next image, show class has higher z-index
+	next.css({opacity: 0.0}).addClass('show').animate({opacity: 1.0}, 1000);
+	
+	//Hide the caption first, and then set and display the caption
+	$('#slideshow-caption').animate({bottom:-70}, 300, function () {
+			//Display the content
+			$('#slideshow-caption h3').html(title);
+			$('#slideshow-caption p').html(desc);				
+			$('#slideshow-caption').animate({bottom:0}, 500);	
+	});		
+
+	//Hide the current image
+	current.animate({opacity: 0.0}, 1000).removeClass('show');
+
+}
+</script>
+<style type="text/css">
+
+body {
+	font-family:arial;	
+	font-size:12px;
+}
+
+ul.slideshow {
+	list-style:none;
+	width:950px;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+	margin:0;
+	padding:0;
+	
+}	
+
+ul.slideshow li {
+	position:absolute;
+	left:0;
+	right:0;
+}
+
+ul.slideshow li.show {
+	z-index:500;	
+}
+
+ul img {
+	border:none;	
+}
+
+
+
+
+#slideshow-caption .slideshow-caption-container {
+	padding:5px 10px;		
+	z-index:1000;
+}
+
+#slideshow-caption h3 {
+	margin:0;
+	padding:0;	
+	font-size:14px;
+}
+
+#slideshow-caption p {
+	margin:5px 0 0 0;
+	padding:0;
+}</style>
+<link href="down.css" rel="stylesheet" type="text/css" />
+<script src="freecontactformvalidation.js"></script>
+	<script>
+	required.add('Full_Name','NOT_EMPTY','Full Name');
+	required.add('Email_Address','EMAIL','Email Address');
+	required.add('Your_Message','NOT_EMPTY','Your Message');
+	required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
+	</script>
+	<link rel="stylesheet" type="text/css" href="freecontactform.css">
+
+<meta name="description" content="ASCO provides 1st class Freight Forwarding and Logistics services for our clients all over the World" /><meta name="keywords" content="apex shipping,contact us, contacts for shipping company, freight forwarder in ghana, logistics, brokerage, ship husbandry, air freight, ocean freight, shipping, international freight, trucking, haulage, apex, bunkering, agents in ghana, tema port, tema harbour" />
+</head>
+<script type="text/javascript">
+//<![CDATA[
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Disable context menu on images by GreenLava (BloggerSentral.com)
+Version 1.0
+You are free to copy and share this code but please do not remove this credit notice.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    function nocontext(e) {
+        var clickedTag = (e==null) ? event.srcElement.tagName : e.target.tagName;
+        if (clickedTag == "IMG") {
+            alert(alertMsg);
+            return false;
+        }
+    }
+    var alertMsg = "Right clicking of Images is disabled";
+    document.oncontextmenu = nocontext;
+//]]>
+</script>
+<body id="page1">
+<!-- START PAGE SOURCE -->
+<div id="main">
+  
+
+
+<div id="header">
+    <div class="row-1">
+      <div class="fleft"><img src="images/logo.png" width="302" height="135" alt="" /></div>
+      <div class="fright">
+       
+<br/><br/><br/><form action="http://www.google.com/translate" target="_new" >
+			<script language="JavaScript">
+            document.write ("<input name=u value="+location.href+" type=hidden>") 
+            </script>
+            <input name="hl" value="en" type="hidden">
+            <input name="ie" value="UTF8" type="hidden">
+            <input name="langpair" value="" type="hidden">
+            <input name="langpair" value="en|fr" title="French" src= "images/fr.jpg" onclick="this.form.langpair.value=this.value" height="20" type="image">
+            <input name="langpair" value="en|de" title="German" src= "images/ger.jpg" onclick="this.form.langpair.value=this.value" height="20" type="image">
+            <input name="langpair" value="en|es" title="Spanish" src= "images/spa.jpg" onclick="this.form.langpair.value=this.value" height="20" type="image">
+            <input name="langpair" value="en|zh-CN" title="Chinese Simplified" src= "images/chi.jpg" onclick="this.form.langpair.value=this.value" height="20" type="image">
+        </form>
+        
+        
+        
+      </div>
+    </div>
+<!-- Begining of Menu -->
+  <ul class="menuH decor1">
+    <li style="margin-left:70px;"><a class="arrow" href="index-2.html">Home</a></li>
+    <li><a href="about-us.html" class="arrow">Who We Are</a>
+        <ul>
+            <li><a class="arrow" href="about-us.html">Company Profile</a></li>
+            <li><a class="arrow" href="mission.html">Mission & Vission</a></li>
+            
+             <li><a class="arrow" href="clients.html">Our Clientelle</a></li>
+        </ul>
+    </li>
+   
+    	<ul class="dropToLeft">
+        	<li><a href="health.html">Fitness & Health</a></li>
+            <li><a href="train.html">Training & Development</a></li>
+            <li><a href="csr.html">Corporate Social Responsibility</a></li>
+        </ul>
+        </li>
+        <li><a href="freightforwarding.html" class="arrow">What We Do</a>
+        <ul class="dropToLeft">
+            <li><a class="arrow" href="freightforwarding.html">Freight Forwarding</a></li>
+            <li><a class="arrow" href="shippingagency.html">Shipping Agency</a></li>
+            <li><a class="arrow" href="consultancy.html">Consultancy</a></li>
+        </ul>
+    </li>
+     
+ <li><a href="quote.html" class="arrow">Track Shipment</a></li>
+ <li><a class="arrow" href="contact.html">Contact Us</a></li>
+    </ul>
+  <!-- End of Menu -->
+<br/>
+  
+  <div id="content">
+    <div class="box">
+      <div class="border-bot">
+        <div class="right-bot-corner">
+          <div class="left-bot-corner">
+           
+        </div>
+      </div>
+    </div>
+    <div class="indent">
+      <div class="wrapper">
+        <div class="col-1">
+          <h3><b>Contact</b> Form</h3>
+         <p>Fields marked with <span class="required_star"> * </span> are mandatory.</p><form name="freecontactform" method="post" action="#" onsubmit="return validate.check(this)">
+	<table class="freecontactform">
+	<tr>
+	 <td width="212" valign="top">
+	  <label for="Full_Name" class="required"><p>Full Name *</p> </label>
+	 </td>
+	 <td width="312" valign="top">
+	  <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:230px">
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Email_Address" class="required">
+	  <p>Email Address * </label>
+	 </p></td>
+	 <td valign="top">
+	  <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:230px">
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Telephone_Number" class="not-required"><p>Telephone Number</p></label>
+	 </td>
+	 <td valign="top">
+	  <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:230px">
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Your_Message" class="required"><p>Your Message *</p> </label>
+	 </td>
+	 <td valign="top">
+	  <textarea style="width:230px;height:160px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+	 </td>
+	</tr>
+	<tr>
+	 <td colspan="2" style="text-align:center" >
+	  <div class="antispammessage">
+	    <p align="left">To help prevent automated spam, please answer this question</p>
+      </div></td>
+      </tr><tr>
+      <td>
+	<div class="antispamquestion">
+ <p>Using only numbers, what is 10 plus 15? &nbsp; (10 + 15)</p><td> <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px"><td>
+		  
+		  </div>
+	  </div>
+	 </td>
+	</tr>
+	<tr>
+	 <td colspan="2" style="text-align:center" >
+	 <br /><br />
+	  <input type="submit" value=" Submit Form " style="width:200px;height:40px">
+	  <br /><br />
+	 </td>
+	</tr>
+	</table>
+	</form>
+        </div>
+        <br/>
+        <div class="col-2">
+          <div class="box2">
+            <div class="border-top">
+              <div class="left-top-corner">
+                <div class="right-top-corner">
+                  <div class="inner">
+                  
+                    <h4><b>Contact</b> Details</h4>
+                    <ul class="news">
+                       <li><a href="#">Physical Address:</a>
+                        <p>33 Addogon Street<br/>Accra - Ghana</p>
+                      </li>
+                       <li><a href="#">Postal Address:</a>
+                        <p>CE 12366, TEMA</p>
+                      </li>
+                      <li><a href="#">Telephone:</a>
+                        <p>+233 504191412 </p>
+                      </li>
+                      <li><a href="#">Email:</a>
+                        <p>kwesi.adablah@gmail.com</p>
+                      </li>
+                      <li><a href="#">Social Media:</a><br/><br/>
+                        <a href="#" target="_new"/><img src="images/fb.png" width="60" height="60"/></a> &nbsp;&nbsp;
+                        <a href="#" target="_new"/><img src="images/youtubeLogo.png" width="60px" height="60px"/></a>&nbsp;&nbsp;
+                       <a href="#" target="_new"/><img src="images/linkedin.png" width="60px" height="60px"/></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box3">
+            <div class="right-bot-corner">
+              <div class="left-bot-corner">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--   -->
+  <br/><br/>
+  <div id="footer">
+    <div class="footer-nav">
+      <div class="left">
+        <ul>
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="freightforwarding.html">Services</a></li>
+          <li class="last"><a href="contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerlink">
+      <p class="lf">Copyright &copy; 2015 <a href="index.html">SiteName</a> - All Rights Reserved</p>
+      <p class="rf"></p>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+<!-- END PAGE SOURCE -->
+<div align=center></div></body>
+
+<!-- Mirrored from www.apexshipping.net/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Oct 2015 07:49:50 GMT -->
+</html>
