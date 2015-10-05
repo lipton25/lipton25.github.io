@@ -30,7 +30,8 @@ fieldset {
 	border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
-
+    width: 60%;
+        
 }
 legend {
 	font-weight: bold;
@@ -632,7 +633,7 @@ table.center {
 .style12 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #005669; }
 
 .tb10 {
-	background-image:url(img/form_bg.jpg);
+	
 	background-repeat:repeat-x;
 	border:1px solid #d1c7ac;
 	width: 350px;
